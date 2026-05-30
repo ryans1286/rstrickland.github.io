@@ -299,3 +299,15 @@ footer {
     font-weight: 600;
     color: var(--accent-color);
 }
+
+/* Restricts podcast/card artwork from ballooning on large screens */
+.card-img {
+    width: 240px;            /* Forces a clean, consistent width */
+    max-width: 100%;         /* Prevents it from breaking on tiny mobile screens */
+    height: 240px;           /* Keeps it perfectly square */
+    object-fit: cover;       /* Ensures the image crops beautifully without distortion if needed */
+    display: block;
+    margin: 0 auto 15px auto; /* Centers the image horizontally and adds bottom spacing */
+    border-radius: 6px;      /* Matches the card's smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle depth to the artwork */
+}
