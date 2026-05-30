@@ -282,6 +282,14 @@ footer {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
     border-color: #cbd5e0;
 }
+/* Explicitly strips the default underline from text headers or spans inside the link */
+.card-link *, 
+.card-link h3, 
+.card-link p, 
+.card-link span {
+    text-decoration: none !important;
+}
+
 
 /* Optional stylistic hint at the bottom of the card */
 .read-more {
