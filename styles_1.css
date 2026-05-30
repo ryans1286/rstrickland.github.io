@@ -268,3 +268,26 @@ footer {
     .podcast-feature { padding: 30px; }
     nav { flex-direction: column; gap: 15px; }
 }
+
+/* Make the wrapping link behave like a block element */
+.card-link {
+    text-decoration: none; /* Removes text underlines from the whole card */
+    color: inherit;        /* Keeps your text-main color intact */
+    display: block;
+}
+
+/* Optional: Move your hover effect from .card:hover to the link wrapper */
+.card-link:hover .card {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e0;
+}
+
+/* Optional stylistic hint at the bottom of the card */
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
