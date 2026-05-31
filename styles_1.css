@@ -324,7 +324,7 @@ figure.project-image {
 /* Force the image to obey the boundaries */
 figure.project-image img {
     display: block;
-    width: 100% !important;     /* Forces the image to fill the text column... */
+    width: 70% !important;     /* Forces the image to fill the text column... */
     max-width: 100% !important; /* ...but absolutely forbids it from going wider */
     height: auto !important;    /* Keeps the image aspect ratio perfectly intact */
     border-radius: 4px;
