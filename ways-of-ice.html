@@ -79,6 +79,7 @@
                             data-pause="<strong>Pause</strong>">
                             Listen to Episode 01 &rarr;
                         </span>
+                        <div class="restart-btn" onclick="restartAudio(event, this)">&#x21BA; Restart</div>
                     </div>
                 </div>
 
@@ -92,6 +93,7 @@
                             data-pause="<strong>Pause</strong>">
                             Listen to Episode 02 &rarr;
                         </span>
+                        <div class="restart-btn" onclick="restartAudio(event, this)">&#x21BA; Restart</div>
                     </div>
                 </div>
 
@@ -105,6 +107,7 @@
                             data-pause="<strong>Pause</strong>">
                             Listen to Episode 03 &rarr;
                         </span>
+                        <div class="restart-btn" onclick="restartAudio(event, this)">&#x21BA; Restart</div>
                     </div>
                 </div>
 
@@ -229,4 +232,23 @@ function toggleAudio(cardElement) {
         cardElement.classList.remove('is-playing');
     }
 }
+
+function restartAudio(event, restartElement) {
+    // Prevent the click from registering on the outer parent card layout
+    event.stopPropagation(); 
+    
+    const parentCard = restartElement.closest('.card');
+    const audio = parentCard.querySelector('.podcast-player');
+    const statusText = parentCard.querySelector('.audio-status');
+    
+    // Reset track position to absolute zero
+    audio.currentTime = 0; 
+    
+    // If it was paused, keep it paused. If it was playing, keep playing cleanly.
+    if (!audio.paused) {
+        audio.play();
+    }
+}
+
 </script>
+
