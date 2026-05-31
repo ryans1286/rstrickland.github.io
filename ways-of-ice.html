@@ -184,44 +184,46 @@
 </body>
 </html>
 
-<script>
-function toggleAudio(cardElement) {
-    const audio = cardElement.querySelector('.podcast-player');
-    const statusText = cardElement.querySelector('.audio-status');
-    
-    // Safety check for the active card
-    if (!statusText) return;
-    const episodeLabel = statusText.getAttribute('data-episode');
-    
-    if (audio.paused) {
-        // Reset all other cards safely
-        document.querySelectorAll('.podcast-player').forEach(player => {
-            player.pause();
-            const parentCard = player.closest('.card');
-            
-            // Safety check: ensure the parent card exists and has the label element
-            if (parentCard) {
-                const otherStatusText = parentCard.querySelector('.audio-status');
-                if (otherStatusText) {
-                    const otherLabel = otherStatusText.getAttribute('data-episode');
-                    // Only update the HTML if we actually successfully retrieved the data label
-                    if (otherLabel) {
-                        otherStatusText.innerHTML = `Listen to ${otherLabel} &rarr;`;
-                    }
-                }
-                parentCard.classList.remove('is-playing');
-            }
-        });
+<div class="grid">
+        
+        <div class="card podcast-card" onclick="toggleAudio(this)">
+            <audio class="podcast-player" src="audio/01_the_paradox_of_scale.mp3" preload="metadata"></audio>
+            <div style="text-align: center;">
+                <h3>Episode 01 — The Paradox of Scale</h3>
+                <img src="images/earths_water.png" alt="Ways of Ice Podcast - Episode 01: The Paradox of Scale cover art" class="card-img">
+                <span class="audio-status read-more" 
+                      data-play="Listen to Episode 01 &rarr;" 
+                      data-pause="<strong>&DoubleVerticalLine; Pause Episode 01</strong>">
+                      Listen to Episode 01 &rarr;
+                </span>
+            </div>
+        </div>
 
-        // Play this track
-        audio.play();
-        statusText.innerHTML = "<strong>⏸ Pausing...</strong>";
-        cardElement.classList.add('is-playing');
-    } else {
-        // Pause this track
-        audio.pause();
-        statusText.innerHTML = `Listen to ${episodeLabel} &rarr;`;
-        cardElement.classList.remove('is-playing');
-    }
-}
-</script>
+        <div class="card podcast-card" onclick="toggleAudio(this)">
+            <audio class="podcast-player" src="audio/02_the_paradox_of_melt.mp3" preload="metadata"></audio>
+            <div style="text-align: center;">
+                <h3>Episode 02 — The Paradox of Melt</h3>
+                <img src="images/mass_balance.png" alt="Ways of Ice Podcast - Episode 02: The Paradox of Melt cover art" class="card-img">
+                <span class="audio-status read-more" 
+                      data-play="Listen to Episode 02 &rarr;" 
+                      data-pause="<strong>&DoubleVerticalLine; Pause Episode 02</strong>">
+                      Listen to Episode 02 &rarr;
+                </span>
+            </div>
+        </div>
+
+        <div class="card podcast-card" onclick="toggleAudio(this)">
+            <audio class="podcast-player" src="audio/03_the_paradox_of_flow.mp3" preload="metadata"></audio>
+            <div style="text-align: center;">
+                <h3>Episode 03 — The Paradox of Flow</h3>
+                <img src="images/glacier_flow.png" alt="Ways of Ice Podcast - Episode 03: The Paradox of Flow cover art" class="card-img">
+                <span class="audio-status read-more" 
+                      data-play="Listen to Episode 03 &rarr;" 
+                      data-pause="<strong>&DoubleVerticalLine; Pause Episode 03</strong>">
+                      Listen to Episode 03 &rarr;
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
