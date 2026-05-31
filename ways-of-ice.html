@@ -65,6 +65,44 @@
         </section>
 
         <!-- EPISODES -->
+         <section id="episodes">
+            <h2>🎙️ Season 1 - Glacial Thinking</h2>
+            <p>
+            Topics include the scale of glaciation on Earth, melt and accumulation, ice flow, and glacial erosion. Full transcripts and additional resources will be added over time.
+            </p>
+            
+            <div class="grid">
+                
+                <div class="card podcast-card" onclick="toggleAudio(this)">
+                    <audio class="podcast-player" src="audio/01_the_paradox_of_scale.mp3" preload="metadata"></audio>
+                    <div style="text-align: center;">
+                        <h3>Episode 01 — The Paradox of Scale</h3>
+                        <img src="images/earths_water.png" alt="Ways of Ice Podcast - Episode 01: The Paradox of Scale cover art" class="card-img">
+                        <span class="audio-status">Listen to Episode 01 &nbsp;&tr;&rArr;</span>
+                    </div>
+                </div>
+
+                <div class="card podcast-card" onclick="toggleAudio(this)">
+                    <audio class="podcast-player" src="audio/02_the_paradox_of_melt.mp3" preload="metadata"></audio>
+                    <div style="text-align: center;">
+                        <h3>Episode 02 — The Paradox of Melt</h3>
+                        <img src="images/mass_balance.png" alt="Ways of Ice Podcast - Episode 02: The Paradox of Melt cover art" class="card-img">
+                        <span class="audio-status">Listen to Episode 02 &nbsp;&tr;&rArr;</span>
+                    </div>
+                </div>
+
+                <div class="card podcast-card" onclick="toggleAudio(this)">
+                    <audio class="podcast-player" src="audio/03_the_paradox_of_flow.mp3" preload="metadata"></audio>
+                    <div style="text-align: center;">
+                        <h3>Episode 03 — The Paradox of Flow</h3>
+                        <img src="images/glacier_flow.png" alt="Ways of Ice Podcast - Episode 03: The Paradox of Flow cover art" class="card-img">
+                        <span class="audio-status">Listen to Episode 03 &nbsp;&tr;&rArr;</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
 
         <section id="episodes">
             <h2>🎙️ Season 1 - Glacial Thinking</h2>
@@ -185,3 +223,30 @@
     </footer>
 </body>
 </html>
+
+<script>
+function toggleAudio(cardElement) {
+    // Find the audio player inside this specific card
+    const audio = cardElement.querySelector('.podcast-player');
+    const statusText = cardElement.querySelector('.audio-status');
+    
+    // Check if the audio is currently paused
+    if (audio.paused) {
+        // Pause any other playing audio elements on the page first
+        document.querySelectorAll('.podcast-player').forEach(p => {
+            p.pause();
+            p.closest('.card').querySelector('.audio-status').innerHTML = "Click to Listen &nbsp;&tr;&rArr;";
+        });
+
+        // Play this file
+        audio.play();
+        statusText.innerHTML = "<strong>⏸ Pausing...</strong>";
+        cardElement.classList.add('is-playing');
+    } else {
+        // Pause this file
+        audio.pause();
+        statusText.innerHTML = "Click to Listen &nbsp;&tr;&rArr;";
+        cardElement.classList.remove('is-playing');
+    }
+}
+</script>
