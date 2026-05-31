@@ -361,3 +361,8 @@ html {
 .podcast-card:hover .audio-status.read-more {
     text-decoration: underline; /* Toggles an underline when hovering over the card */
 }
+
+/* Changes the mouse arrow to a clickable finger when hovering over the cards */
+.podcast-card {
+    cursor: pointer;
+}
