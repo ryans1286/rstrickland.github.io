@@ -366,3 +366,14 @@ html {
 .podcast-card {
     cursor: pointer;
 }
+
+/* Styling for non-graph photography to span full text width */
+.photo-full {
+    width: 100%;          /* Forces the image to span the full width of its container */
+    max-width: 100%;      /* Ensures it never spills out of the text boundaries */
+    height: auto;         /* Maintains the photo's original aspect ratio */
+    display: block;       /* Removes the default bottom whitespace gap common in inline images */
+    margin: 2rem auto;    /* Centers the photo and adds clean breathing room above and below */
+    border-radius: 4px;   /* Optional: A very subtle rounding of the sharp edges to match modern UI */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Optional: Soft shadow to give depth to standalone photos */
+}
