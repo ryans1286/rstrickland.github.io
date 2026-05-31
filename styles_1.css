@@ -56,6 +56,7 @@ nav .logo {
     color: var(--primary-color);
     text-decoration: none;
     letter-spacing: -0.5px;
+    display: flex;
 }
 
 nav ul {
@@ -340,5 +341,10 @@ figure.project-image figcaption {
 
 /* Keeps anchor links from sliding under the fixed header */
 .project-item {
-    scroll-margin-top: 80px; /* Adjust this number to match the actual height of your header */
+    scroll-margin-top: 100px !important; /* Adjust this number to match the actual height of your header */
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
