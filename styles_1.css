@@ -337,3 +337,8 @@ figure.project-image figcaption {
     color: #555;
     line-height: 1.4;
 }
+
+/* Keeps anchor links from sliding under the fixed header */
+.project-item {
+    scroll-margin-top: 80px; /* Adjust this number to match the actual height of your header */
+}
