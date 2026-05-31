@@ -377,3 +377,26 @@ html {
     border-radius: 4px;   /* Optional: A very subtle rounding of the sharp edges to match modern UI */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Optional: Soft shadow to give depth to standalone photos */
 }
+
+/* Style the figure container to match the width of the paragraph text */
+figure.photo-full {
+    width: 100%;
+    margin: 2rem 0; /* Adds top/bottom space, aligns strictly to the left text edge */
+    padding: 0;
+}
+
+/* Force the actual image inside that container to fill the text column safely */
+figure.photo-full img {
+    width: 100%;       /* Spans exactly 100% of the section width */
+    height: auto;      /* Keeps the proportions perfectly intact */
+    display: block;    /* Removes inline spacing bugs */
+    border-radius: 4px; /* Optional: Clean edge softening */
+}
+
+/* Style the text underneath the photo */
+figure.photo-full figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.6rem;
+    line-height: 1.4;
+}
