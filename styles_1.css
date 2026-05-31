@@ -341,7 +341,7 @@ figure.project-image figcaption {
 
 /* Keeps anchor links from sliding under the fixed header */
 .project-item {
-    scroll-margin-top: 100px !important; /* Adjust this number to match the actual height of your header */
+    scroll-margin-top: 120px !important; /* Adjust this number to match the actual height of your header */
 }
 
 html {
