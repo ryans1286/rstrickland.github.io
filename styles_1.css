@@ -348,3 +348,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Force the audio text to exactly match your existing link aesthetics */
+.audio-status.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;       /* Makes it pop */
+    color: #0074d9;          /* Change this hex code if your site uses a different blue */
+    text-decoration: none;
+}
+
+/* Optional hover visual cue */
+.podcast-card:hover .audio-status.read-more {
+    text-decoration: underline; /* Toggles an underline when hovering over the card */
+}

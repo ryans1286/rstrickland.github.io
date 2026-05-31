@@ -78,7 +78,7 @@
                     <div style="text-align: center;">
                         <h3>Episode 01 — The Paradox of Scale</h3>
                         <img src="images/earths_water.png" alt="Ways of Ice Podcast - Episode 01: The Paradox of Scale cover art" class="card-img">
-                        <span class="audio-status">Listen to Episode 01 &rarr;</span>
+                        <span class="audio-status read-more">Listen to Episode 01 &rarr;</span>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
                     <div style="text-align: center;">
                         <h3>Episode 02 — The Paradox of Melt</h3>
                         <img src="images/mass_balance.png" alt="Ways of Ice Podcast - Episode 02: The Paradox of Melt cover art" class="card-img">
-                        <span class="audio-status">Listen to Episode 02 &rarr;</span>
+                        <span class="audio-status read-more">Listen to Episode 02 &rarr;</span>
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@
                     <div style="text-align: center;">
                         <h3>Episode 03 — The Paradox of Flow</h3>
                         <img src="images/glacier_flow.png" alt="Ways of Ice Podcast - Episode 03: The Paradox of Flow cover art" class="card-img">
-                        <span class="audio-status">Listen to Episode 03 &rarr;</span>
+                        <span class="audio-status read-more">Listen to Episode 03 &rarr;</span>
                     </div>
                 </div>
 
@@ -226,26 +226,30 @@
 
 <script>
 function toggleAudio(cardElement) {
-    // Find the audio player inside this specific card
     const audio = cardElement.querySelector('.podcast-player');
     const statusText = cardElement.querySelector('.audio-status');
+    const episodeLabel = statusText.getAttribute('data-episode');
     
-    // Check if the audio is currently paused
     if (audio.paused) {
-        // Pause any other playing audio elements on the page first
-        document.querySelectorAll('.podcast-player').forEach(p => {
-            p.pause();
-            p.closest('.card').querySelector('.audio-status').innerHTML = "Click to Listen &nbsp;&tr;&rArr;";
+        // Reset all other cards safely using their data attributes
+        document.querySelectorAll('.podcast-player').forEach(player => {
+            player.pause();
+            const parentCard = player.closest('.card');
+            const otherStatusText = parentCard.querySelector('.audio-status');
+            const otherLabel = otherStatusText.getAttribute('data-episode');
+            
+            otherStatusText.innerHTML = `Listen to ${otherLabel} &rarr;`;
+            parentCard.classList.remove('is-playing');
         });
 
-        // Play this file
+        // Play this track
         audio.play();
         statusText.innerHTML = "<strong>⏸ Pausing...</strong>";
         cardElement.classList.add('is-playing');
     } else {
-        // Pause this file
+        // Pause this track
         audio.pause();
-        statusText.innerHTML = "Click to Listen &nbsp;&tr;&rArr;";
+        statusText.innerHTML = `Listen to ${episodeLabel} &rarr;`;
         cardElement.classList.remove('is-playing');
     }
 }
