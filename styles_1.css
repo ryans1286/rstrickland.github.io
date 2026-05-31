@@ -311,3 +311,28 @@ footer {
     border-radius: 6px;      /* Matches the card's smooth corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle depth to the artwork */
 }
+
+/* Container for the image and caption */
+figure.project-image {
+    margin: 2rem 0; /* Adds spacing above and below the image block */
+    padding: 0;
+    max-width: 100%; /* Prevents the figure container from exceeding text width */
+    text-align: left; /* Aligns the image/caption with your text fluidly */
+}
+
+/* Responsive Image Rules */
+figure.project-image img {
+    display: block;
+    width: 100%;       /* Spans the full width of the text column... */
+    max-width: 100%;   /* ...but strictly forbids it from expanding wider than that */
+    height: auto;      /* Maintains the aspect ratio so it doesn't distort */
+    border-radius: 4px; /* Optional: gives a slight, clean rounding to the corners */
+}
+
+/* Caption Styling */
+figure.project-image figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;   /* Makes the caption slightly smaller than body text */
+    color: #555;         /* Mutes the color slightly so it doesn't compete with content */
+    line-height: 1.4;
+}
