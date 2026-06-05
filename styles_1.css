@@ -464,3 +464,16 @@ figure.podcast-logo-main figcaption {
     margin-top: 0.75rem;
     font-style: italic;
 }
+
+/* Removes default bullet behavior and resets padding for lists */
+.episode-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 2rem 0;
+}
+
+/* Adds clean spacing between individual episodes */
+.episode-list li {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
