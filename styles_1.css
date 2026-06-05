@@ -438,3 +438,29 @@ figure.photo-full figcaption {
         text-align: center; /* Centers the logo on mobile screens */
     }
 }
+
+/* Custom constraint for square podcast cover art on the main landing page */
+figure.podcast-logo-main {
+    width: 100%;
+    max-width: 350px;     /* Prevents the logo from stretching past a standard 350px square */
+    margin: 2.5rem auto;  /* Centers the logo horizontally and provides clean top/bottom separation */
+    text-align: center;   /* Ensures the caption text remains perfectly centered underneath */
+    padding: 0;
+}
+
+/* Force the image inside this custom figure to fit its new boundaries precisely */
+figure.podcast-logo-main img {
+    width: 100%;          /* Fills up to the maximum 350px container width */
+    height: auto;         /* Preserves the square aspect ratio cleanly */
+    display: block;       
+    border-radius: 8px;   /* Softens the square corners to match professional audio directories */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); /* Adds a crisp drop shadow to elevate the artwork */
+}
+
+/* Format the attribution text */
+figure.podcast-logo-main figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.75rem;
+    font-style: italic;
+}
