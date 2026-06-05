@@ -53,9 +53,13 @@
         <div class="project-item" id="bifurcation">
             <h3>Glacier and Ice Stream Bifurcation</h3>
         </div>
-            <p>
-            When we think of glaciers in Antarctica and Greenland, we often picture massive, slow-moving corridors of ice, but in many ways, they behave like rivers. Across Antarctica and Greenland, large glaciers frequently split into two separate paths. These junctions are battlegrounds where each branch competes for ice. Despite their role in routing billions of tons of ice to the ocean, these bifurcations have never been systematically studied. My current focus sets out to answer a fundamental question: are branching angles forced by the shape of the bedrock below, or is the ice creating its own path?
+        <p>
+            Across Antarctica and Greenland, large glaciers frequently split into two separate flow paths. At these junctions, each branch competes for ice, influencing how fast and where ice reaches the oceans. Despite their importance, bifurcations have never been systematically studied. My research asks a fundamental question: are branching geometries forced by the bedrock below, or does the ice itself help determine the shape of the split?
         </p>
+        <p>
+            By analyzing satellite imagery, I discovered a striking pattern: glaciers in both Greenland and Antarctica consistently branch at angles near 60 degrees. This is surprising because Greenland and Antarctica differ in climate, tectonic history, and bedrock geology. If the underlying bedrock alone controlled glacier branching angles, we would expect the two regions to exhibit different characteristic angles. Instead, the similarity suggests that branching geometry may arise from the physics of ice flow itself.  
+        </p>
+
         <figure class="project-image">
             <img src="images/bifurcations_1_figure.png" alt="Maps of glacier bifurcations in Antarctica and Greenland with a histogram of branching angles. ">
             <figcaption>
@@ -63,9 +67,20 @@
                 Global distribution and geometry of glacier and ice stream bifurcations. (a,b) The locations of mapped bifurcations in Antarctica (n=87) and Greenland (n=223). (c) Regional view of the bifurcation at the junction of Thwaites Glacier and the NW Tributary (PIGlet), West Antarctica. (d) The distribution of observed branching angles. Histograms and kernel density estimations (KDE) of observed branching angles in Antarctica (yellow bars; black dash-dot KDE), Greenland (green bars; solid black line), and the combined distribution KDE (orange dashed line). 
             </figcaption>
         </figure>
-        <p>
-            By analyzing satellite imagery, I discovered a pattern: glaciers in both Greenland and Antarctica consistently branch at angles right around 60 degrees. To understand why, I developed a simplified model to look at the physics of branching geometry. With this model, you can think of branching as tug-of-war between the three pathways, where friction at the bed and resistance in the glacier margins controls how hard each path pulls. The model shows that these competing forces naturally balance out to favor that 60-degree angle, meaning that ice dynamics could actively shape how glaciers divide.
+
+        <p>  
+            To investigate this idea, I developed a simplified model of glacier branching. In the model, the junction is treated like tug-of-war between the three branches. At equilibrium, friction at the bed and internal resistance caused by ice deformation in the margins in each branch must balance one another, and the magnitudes of these forces depends on the widths, depths, and ice flow speeds in each branch. The model shows that these competing forces naturally favor 60-degree angles, suggesting that ice dynamics alone favors a characteristic branching geometry.
         </p>
+
+        <figure class="project-image">
+            <img src="images/bifurcations_2_figure_photo.png" alt="Conceptual model of glacier branching.">
+            <figcaption>
+                <strong>Figure 2:</strong>
+                (a) A glacier flowing from top-left to center-right bifurcates into two branches that both terminate in a fjord, East Greenland (image from Google Earth). (b) Schematic plan-view of a bifurcating glacier. Ice flow (blue arrows) from a parent channel is forced to split into two distributary branches by a topographic rise or other basal obstacle. The total resistance to flow in each section is partitioned into basal drag (red) and marginal resistance (green), representing the primary dissipative components of the system. Within this framework, the branching angle adjusts to the balance of these dissipative forces, rather than being strictly imposed by the underlying topography. (c) The bifurcation point is modeled as a free node where the equilibrium geometry satisfies a vector balance of dissipative weights. These weights are the sum of the basal and marginal components and act as magnitudes along unit vectors pointing in the direction of decreasing branch cost. Following the principle of minimum work, the stationary condition defines the configuration that minimizes the total dissipation rate of the system.
+                 
+            </figcaption>
+        </figure>
+
         <figure class="project-image">
             <img src="images/bifurcations_3_figure_final.png" alt="Model predictions of glacier branching angles.">
             <figcaption>
@@ -75,7 +90,13 @@
             </figcaption>
         </figure>
         <p>
-            This could change how we look at vulnerable regions, like West Antarctica. Because many of these massive ice streams flow over relatively flat, low-relief topography, they aren't securely locked in place. Instead, their routes are sensitive to subtle changes in ice thickness, internal strength, and how slippery the bed is underneath them. As the climate warms, even minor shifts in these factors could cause entire glacier networks to reroute their flow, fundamentally altering how quickly ice drains into the sea.
+            This hsas important implications for vulnerable regions, like West Antarctica. Many Antarctic glaciers flow across broad, low-relief beds, that do not strongly confine ice flow. In these settings, glacier paths are highly sensitive to subtle changes in ice thickness, ice strength, and friction at the bed. As the climate conditions evolve, even minor shifts in these properties could cause entire glacier networks to reroute their flow, fundamentally altering how quickly ice drains into the sea. 
+        </p>
+        <p>
+            More broadly, this work addresses a longstanding question in glacier landscape evolution: does topography control where ice flows, or does ice flow shape the topography over which it flows? My work suggests that while bedrock may initiate a bifurcation, the physics of ice flow constrains which branching geometries are dynamically stable. In that sense, the bed may force the split, but the ice determines the shape of the split. 
+        </p>
+        <p>
+            <em>Competing dissipation regimes constrain glacier branching angles</em> authored by Strickland, R.M., Wheel, I., and Young, T.J. (2026) is in review. If you'd like a copy, please send me an email.
         </p>
         
         <div class="project-item" id="thwaites">
